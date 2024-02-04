@@ -35,7 +35,7 @@ int main(int argc, char* argv[]){
 
     initGTKfunctions(argc, argv, wdg);
     myparam.wdg = wdg;
-    
+
     pthread_create(&th, NULL, procAnalyzeP, &myparam);
 
     gtk_main();
@@ -99,7 +99,7 @@ void* procAnalyzeP(void* param){
         }else{
             g_print("buf is Null");
         }
-    gtk_label_set_text((GtkLabel*)prm->wdg.label, "asdf");
+    gtk_label_set_text((GtkLabel*)prm->wdg.label, (const char*)buf);
 	g_print("\n");
     }
 }

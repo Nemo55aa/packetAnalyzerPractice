@@ -47,7 +47,7 @@ void PrintIpHeaderGTK(u_char *buf){
     struct iphdr *ip;
     ip= (struct iphdr *)buf;
     g_print("IP ADDRESS : %s > ",ip_ntoa(ip->saddr));
-    printf("%s | ",ip_ntoa(ip->daddr));
+    g_print("%s | ",ip_ntoa(ip->daddr));
 }
 #endif
 
