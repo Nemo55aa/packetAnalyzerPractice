@@ -8,7 +8,7 @@ OFLAGS = `pkg-config --libs gtk+-3.0`
 PG = main
 
 all: 
-	$(CC) $(CFLAGS) $(PG).cpp  -o $(PG).o $(OFLAGS); ./$(PG).o
+	$(CC) $(CFLAGS) $(PG).cpp  -o $(PG).o $(OFLAGS); 
 
 run:
 	sudo ./$(PG).o
