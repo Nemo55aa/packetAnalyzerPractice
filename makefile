@@ -11,4 +11,5 @@ all:
 	$(CC) $(CFLAGS) $(PG).cpp  -o $(PG).o $(OFLAGS); 
 
 run:
-	sudo ./$(PG).o
+	$(CC) $(CFLAGS) $(PG).cpp  -o $(PG).o $(OFLAGS); sudo ./$(PG).o
+	

@@ -77,3 +77,31 @@ void AnalyzeIPpacketGTK(u_char *buf){
     ip = (struct iphdr *)ptr;
 }
 #endif
+
+#include <iostream>
+#include <string>
+void bufToHexStr(u_char *bufin, uint16_t inSize, char * strout){
+    uint16_t idx;
+    char* tmpchar;
+    std::string tmpstring;
+
+    for(idx = 0; idx < inSize; idx ++){
+        if(bufin[idx] != 0x00){
+            sprintf(tmpchar, "%02X", bufin[idx]);
+
+            tmpstring.append(tmpchar);
+
+            g_print("tmpstring :");
+            g_print(tmpstring.c_str());
+            g_print("\n");
+
+            /*
+            strout = (char*)tmpstring.c_str();
+            g_print("strout :");
+            g_print(strout);
+            g_print("\n");*/
+            strcpy(strout, tmpstring.c_str());
+            //return tmpstring.c_str();
+        }
+    }
+}
